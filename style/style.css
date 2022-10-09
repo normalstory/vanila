@@ -1,0 +1,168 @@
+.hidden{
+    display: none !important;
+}
+body{
+  background-size: cover;
+  background-color: #1C1C1C;
+}
+
+
+
+#login-form{
+    display: flex;
+    padding: 0px;
+    gap: 0.5em;
+    justify-content: center;
+}
+#login-form input:first-child{
+    border: none;
+    border-bottom: 1px solid #E7E7E7;
+    font-family: 'Inter';
+    font-size: 1.5em;
+    background-color: transparent; 
+    color: #E7E7E7;
+}
+#login-form input::placeholder, input:focus {
+    color: #E7E7E7;
+}
+
+#login-form input:last-child{
+    border: none;
+    font-family: 'Inter';
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.2);
+    color: #E7E7E7;
+}
+
+
+
+/* **/
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+
+    color: #FFFFFF;
+}
+
+.todays{
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.todays h2{
+    line-height: 0.1em;
+}
+
+#lifeQuotes{
+    /* Auto layout */
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    line-height: 1em;
+    gap: 10px;
+}
+
+
+
+/* **/
+#board{
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+#todolabel{
+    width: fit-content;
+    display: flex;
+    gap: 1em;
+    border-bottom: 1px solid #FFFFFF;
+}
+#todolabel span:first-child{
+    font-weight: 700;
+    font-size: 0.8em;
+    color: #FFFFFF;
+}
+.dontWorry{
+    font-style: italic;
+    font-size: 1em;
+    color: #FFFFFF;
+}
+#todo-list{
+    list-style:none; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5em 0px;
+    gap: 0.5em;
+}
+#todo-list li{
+    display: flex;
+    align-items: flex-end;
+    padding: 0.5em;
+    gap: 10px;
+    background: rgba(214, 214, 214, 0.4);
+    border-radius: 0.3em;
+}
+
+#todo-list li span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 0.8em;
+    color: #FFFFFF;
+}
+#todo-list li button{
+    border: none;
+    outline: none;
+    background-color: transparent; 
+    color: #FFFFFF;
+}
+
+/* **/
+#main{
+    position:fixed;
+    bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    align-items: flex-start;
+    gap: 1em;
+}
+#main h1{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 0.1em;
+    color: #E7E7E7;
+}
+
+#todo-form input{
+    border: none;
+    border-bottom: 1px solid #E7E7E7;
+    font-family: 'Inter';
+    font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.2);
+    color: #E7E7E7;
+}
+
+#todo-form input::placeholder, input:focus {
+    color: #E7E7E7;
+}
+
+#imgBy{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+
+    font-size: 0.8em;
+    color: #e7e7e7;
+}

@@ -5,9 +5,17 @@ const todoList = document.querySelector("#todo-list");
 let storeTodo=[];
 const TODOS_KEY="todolist";
 
-// function delStore(item){
-//  return item !== 
-// }
+function addCmt(){
+    const p = document.createElement("p");
+    p.innerText=`"괜찮아요, 아직 늦지않았아요. 바로 시작해봐요!"`;
+    p.className="dontWorry";
+    todoList.appendChild(p);
+}
+function delCmt(){
+    const cmt = document.querySelector("#todo-list p");
+    if(cmt)
+        todoList.removeChild(cmt);
+}
 
 function handleRemove(select){
     // console.dir("target - ",select.target);
@@ -21,6 +29,8 @@ function handleRemove(select){
     delSelect.remove();
     saveTodo()
     // downTodo.filter(delStore)
+    if(todoList.childElementCount===0)
+        addCmt();  
 }
 
 function paintTodo(todoObj){
@@ -60,7 +70,7 @@ function handleTodoSubmit(event){
     todoInput.value="";
     paintTodo(todoObj);
     saveTodo();
-
+    delCmt();
 }
 
 todoForm.addEventListener("submit",handleTodoSubmit);
@@ -72,8 +82,6 @@ if(getTodo !==null){
     storeTodo=parseTodo;
     parseTodo.forEach(paintTodo);
 }else if(getTodo ===null){
-    const p = document.createElement("p");
-    p.innerText=`"괜찮아요, 아직 늦지않았아요. 바로 시작해봐요!"`;
-    p.className="dontWorry";
-    todoList.appendChild(p);
+    addCmt()
 }
+
